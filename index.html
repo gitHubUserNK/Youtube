@@ -1,0 +1,20 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+  $(function(){
+    $("button").click( function(){
+      url = $("input").val();
+      id = url.split("watch?v=")[1];
+      src = "https://www.youtube.com/embed/" + id;
+      $("iframe").attr("src", src);
+    });
+  });
+</script>
+
+<div>
+  ここにYouTubeのURLを入力してください。
+  <input type="text" value="http://www.youtube.com/watch?v=Glny4jSciVI"></input>
+  <button>見る</button>
+</div>
+
+<iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
